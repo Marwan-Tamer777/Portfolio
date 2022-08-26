@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .static-texture {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.004801) 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0.74;
+        box-shadow: inset 0px 0px 250px rgba(0, 0, 0, 0.5);
+    }
+    /* ... */
+}
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+
+.scale-up{
+    @apply transition hover:-translate-y-2 hover:scale-[1.10]
+}
