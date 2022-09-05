@@ -1,11 +1,11 @@
-import avatar from "../Images/avatar-circle.svg"
-import facebook from "../Images/icon-facebook.svg"
-import linkedin from "../Images/icon-linkedin.svg"
-import downloadIcon from '../Images/download-cv.svg'
+import avatar from "../../Images/avatar-circle.svg"
+import facebook from "../../Images/icon-facebook.svg"
+import linkedin from "../../Images/icon-linkedin.svg"
+import downloadIcon from '../../Images/download-cv.svg'
 import NavSkillsList from "./NavSkillsList"
-import CV from '../Resources/Marwan-Tamer-Resume-U.pdf'
+import CV from '../../Resources/Marwan-Tamer-Resume-U.pdf'
 import { useContext } from "react"
-import { ThemeContext } from "../utils/Context/ThemeContext"
+import { ThemeContext } from "../../utils/Context/ThemeContext"
 const languagesList = {
     title: "Languages",
     items:[
@@ -56,8 +56,8 @@ function NavBarInfoLeft(){
 
                 
                 <object data={avatar}/>
-                <p className={`${colors.mainHeadText} text-lg font-bold `}>Marwan Tamer</p>
-                <p className={`${colors.mainHeadText} text-lg font-bold `}>Front-End Developer</p>
+                <p className={`${colors.mainHeaderText} text-lg font-bold `}>Marwan Tamer</p>
+                <p className={`${colors.mainHeaderText} text-lg font-bold `}>Front-End Developer</p>
 
                 <div className={`flex flex-row justify-around items-around w-full py-4 ${colors.borderB} border-b-2`}>
                     <a href="https://www.facebook.com/marwam.tamer" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up w-7`}><object data={facebook} className="m-auto object-fill"/></a>
@@ -67,12 +67,12 @@ function NavBarInfoLeft(){
                 <div className={`w-full py-4 ${colors.borderB} border-b-2`}>
                     <div className="flex flex-row justify-between py-1">
                         <p className={`${colors.mainBg} p-1 font-medium`}>Age:</p>
-                        <p className={colors.secText}>20</p>
+                        <p className={colors.secHeaderText}>20</p>
                     </div>
 
                     <div className="flex flex-row justify-between py-1">
                         <p className={`${colors.mainBg} p-1`}>Location:</p>
-                        <p className={colors.secText}>Cairo,Egypt</p>
+                        <p className={colors.secHeaderText}>Cairo,Egypt</p>
                     </div>
 
                     <div className="flex flex-row justify-between py-1">

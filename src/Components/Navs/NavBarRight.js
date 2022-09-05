@@ -1,11 +1,11 @@
-import themeChange from '../Images/theme-change.svg'
-import contatUs from '../Images/nav-contact-us.svg'
-import education from '../Images/nav-education.svg'
-import home from '../Images/nav-home.svg'
-import prices from '../Images/nav-prices.svg'
-import services from '../Images/nav-services.svg'
+import themeChange from '../../Images/theme-change.svg'
+import contatUs from '../../Images/nav-contact-us.svg'
+import education from '../../Images/nav-education.svg'
+import home from '../../Images/nav-home.svg'
+import prices from '../../Images/nav-prices.svg'
+import services from '../../Images/nav-services.svg'
 import {useContext} from 'react'
-import { ThemeContext,THEMES } from '../utils/Context/ThemeContext'
+import { ThemeContext,THEMES } from '../../utils/Context/ThemeContext'
 
 function NavBarInfoRight(props){
     const {theme,code,colors} = useContext(ThemeContext)

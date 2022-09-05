@@ -15,11 +15,11 @@ function Welcome(){
             <object data={particleRectangle} className={`absolute left-[50%] top-[5%]`}/>
             <object data={particleCircle} className={`absolute left-[20%] bottom-[5%]`}/>
             
-            <h1 className={`${colors.mainText} font-extrabold m-5 text-5xl`}>
+            <h1 className={`${colors.mainHeaderText} font-extrabold m-5 text-5xl`}>
                 I'm Marwan Tamer<br/>
-                <span className={`${colors.secText}`}>Front-End</span> Developer
+                <span className={`${colors.secHeaderText}`}>Front-End</span> Developer
             </h1>
-            <div className={`${colors.secText} text-sm w-1/3 m-5`}>
+            <div className={`${colors.secHeaderText} text-sm w-1/3 m-5`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
             </div>
             <a href="#" className={`${colors.mainBg} py-3 px-6 scale-up rounded-md m-5  w-fit ${colors.secBgHover}`}>

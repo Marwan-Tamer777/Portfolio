@@ -7,7 +7,7 @@ module.exports = {
         'sonicSilver': '#767676',
         'wheat': '#F3D9B1',
         'darkwheat':'#C29979',
-        'pineBlack': 'Pine Tree',
+        'pineBlack': '',
         'dark':'#2C3333',
         'seawhile':{
           'light':'#395B64',
