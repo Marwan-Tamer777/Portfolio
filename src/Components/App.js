@@ -1,4 +1,4 @@
-import {Component,useEffect,useState} from 'react'
+import {useEffect,useState} from 'react'
 import NavBarInfoLeft from './Navs/NavBarInfoLeft';
 import NavBarInfoRight from './Navs/NavBarRight';
 import Welcome from './Welcome';
@@ -8,6 +8,28 @@ import { ThemeContext,THEMES } from '../utils/Context/ThemeContext';
 
 function App(){
   let [theme,toggleTheme] = useState(THEMES.light);
+
+  useEffect(()=>{
+    /* for some reason the object tags don't load the svg immediately the first time the website loads.
+    so this useEffect is meant to run once when the wesbite gets mounted for the first time
+    thne wait a less than a second for the SVGs objects to load before changing their colors to
+    the approperiate theme.
+    it is a fallback to ensure that the first time the website
+    is loaded the right theme is loaded with it instead of defaulting to a specific theme
+    */
+    let storedThemeCode = localStorage.getItem("theme")
+    let storedTheme
+    if(storedThemeCode != undefined){
+      Object.entries(THEMES).forEach((item,key)=>{
+        if(item[1].code == storedThemeCode){
+          toggleTheme(item[1]) 
+          storedTheme = item[1]
+        }
+      })
+    }
+    
+    setTimeout(()=>{reColorSVGs(storedTheme)},500)
+  },[])
 
   useEffect(()=>{
     let storedThemeCode = localStorage.getItem("theme")
@@ -20,11 +42,6 @@ function App(){
         }
       })
     }
-    /* for some reason the object tags don't load the svg immediately the first time the website loads.
-    so a time out is meant to be a fallback ensurance that the first time the websit
-    is loaded the right theme is loaded with it instead of defaulting to a specific theme
-    */
-      setTimeout(()=>{reColorSVGs(storedTheme)},500)
       reColorSVGs(storedTheme)
     })
 

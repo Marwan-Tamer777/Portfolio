@@ -871,9 +871,9 @@ video {
   background-color: rgb(44 51 51 / var(--tw-bg-opacity));
 }
 
-.bg-seawhile-light {
+.bg-seawhile-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(231 246 242 / var(--tw-bg-opacity));
+  background-color: rgb(57 91 100 / var(--tw-bg-opacity));
 }
 
 .bg-seawhile-medium {
@@ -894,16 +894,6 @@ video {
 .bg-claymore-medium {
   --tw-bg-opacity: 1;
   background-color: rgb(209 81 45 / var(--tw-bg-opacity));
-}
-
-.bg-seawhile-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 91 100 / var(--tw-bg-opacity));
-}
-
-.bg-pineBlack {
-  --tw-bg-opacity: 1;
-  background-color: rgb(48 54 47 / var(--tw-bg-opacity));
 }
 
 .object-fill {
@@ -1035,9 +1025,9 @@ video {
   color: rgb(21 128 61 / var(--tw-text-opacity));
 }
 
-.text-seawhile-dark {
+.text-seawhile-light {
   --tw-text-opacity: 1;
-  color: rgb(57 91 100 / var(--tw-text-opacity));
+  color: rgb(231 246 242 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1045,9 +1035,9 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-seawhile-light {
+.text-seawhile-dark {
   --tw-text-opacity: 1;
-  color: rgb(231 246 242 / var(--tw-text-opacity));
+  color: rgb(57 91 100 / var(--tw-text-opacity));
 }
 
 .text-dark {
