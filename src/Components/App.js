@@ -3,31 +3,51 @@ import NavBarInfoLeft from './Navs/NavBarInfoLeft';
 import NavBarInfoRight from './Navs/NavBarRight';
 import Welcome from './Welcome';
 import PricePlans from './PricePlans/PricePlans';
+import Education from './Education/Education';
 import { ThemeContext,THEMES } from '../utils/Context/ThemeContext';
 
 function App(){
   let [theme,toggleTheme] = useState(THEMES.light);
-  
-  useEffect(()=>{
-    let SVGs =document.querySelectorAll("object")
-    let path
-    SVGs.forEach((svgDoc)=>(         
-        path= svgDoc.contentDocument.querySelector("svg[toggle=true] path") ,
-        path == null ? (0):(path.setAttribute('fill',theme.colors.iconColor)),
-        path= svgDoc.contentDocument.querySelector("svg[toggle=true] circle") ,
-        path == null ? (0):(path.setAttribute('stroke',theme.colors.particleCir)),
-        path= svgDoc.contentDocument.querySelector("svg[toggle=true] rect") ,
-        path == null ? (0):(path.setAttribute('stroke',theme.colors.particleRec)),
-        path= svgDoc.contentDocument.querySelector("svg.tick-right path") ,
-        path == null ? (0):(path.setAttribute('fill',theme.colors.tickRight)),
-        path= svgDoc.contentDocument.querySelector("svg.tick-wrong path") ,
-        path == null ? (0):(path.setAttribute('fill',theme.colors.tickWrong))
-    ))
-  })
 
-  function rerenderApp(newTheme){
-    toggleTheme(newTheme)
-  }
+  useEffect(()=>{
+    let storedThemeCode = localStorage.getItem("theme")
+    let storedTheme
+    if(storedThemeCode != undefined){
+      Object.entries(THEMES).forEach((item,key)=>{
+        if(item[1].code == storedThemeCode){
+          toggleTheme(item[1]) 
+          storedTheme = item[1]
+        }
+      })
+    }
+    /* for some reason the object tags don't load the svg immediately the first time the website loads.
+    so a time out is meant to be a fallback ensurance that the first time the websit
+    is loaded the right theme is loaded with it instead of defaulting to a specific theme
+    */
+      setTimeout(()=>{reColorSVGs(storedTheme)},500)
+      reColorSVGs(storedTheme)
+    })
+
+    function reColorSVGs(storedTheme){
+      let SVGs =document.querySelectorAll("object")
+      let path
+      SVGs.forEach((svgDoc)=>(         
+          path = svgDoc.contentDocument.querySelector("svg[toggle=true] path") ,
+          path == null ? (0):(path.setAttribute('fill',storedTheme.colors.iconColor)),
+          path = svgDoc.contentDocument.querySelector("svg[toggle=true] circle") ,
+          path == null ? (0):(path.setAttribute('stroke',storedTheme.colors.particleCir)),
+          path = svgDoc.contentDocument.querySelector("svg[toggle=true] rect") ,
+          path == null ? (0):(path.setAttribute('stroke',storedTheme.colors.particleRec)),
+          path = svgDoc.contentDocument.querySelector("svg.tick-right path") ,
+          path == null ? (0):(path.setAttribute('fill',storedTheme.colors.tickRight)),
+          path = svgDoc.contentDocument.querySelector("svg.tick-wrong path") ,
+          path == null ? (0):(path.setAttribute('fill',storedTheme.colors.tickWrong))
+      ))
+    }
+
+    function rerenderApp(newTheme){
+      toggleTheme(newTheme)
+    }
 
     return (
       <ThemeContext.Provider value={theme}>
@@ -37,6 +57,7 @@ function App(){
               <div className={`flex-grow-[15] self-start basis-0 rounded-2xl`}>
                 <Welcome/>
                 <PricePlans/>
+                <Education/>
               </div>
               <NavBarInfoRight rerender={rerenderApp}/>
         

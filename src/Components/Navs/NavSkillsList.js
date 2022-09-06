@@ -26,9 +26,9 @@ function NavSkillsList(props){
         <div className={`w-full py-4 border-b-2`}>
             <p className='mx-auto w-fit'>{props.list.title}</p>
             
-            {props.list.items.map(item => {
+            {props.list.items.map((item,key) => {
                 return(
-                    <div>
+                    <div key={key}>
                         
                         {props.list.type==null ?
                             (

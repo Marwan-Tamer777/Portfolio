@@ -13,11 +13,11 @@ export const THEMES = {
             'secBgHover': ' hover:bg-darkwheat ',
             'progressBarBg':' bg-darkwheat ',
             'progressBarBorder': ' border-darkwheat ',
-            'mainText': ' text-black ',
+            'mainText': ' text-pineBlack ',
             'secText': ' text-sonicSilver ',
             'mainHeaderText': ' text-black',
             'secHeaderText': 'text-wheat',
-            'aviText': ' text-green-500 ',
+            'aviText': ' text-green-700 ',
             'borderB': ' border-b-wheat ',
             'iconColor':'#30362F',
             'particleRec':'#0047FF',
@@ -31,18 +31,18 @@ export const THEMES = {
         code:1,
         colors:{
             'mainBg': ' bg-dark ',
-            'secBg': ' bg-seawhile-light ',
-            'beforeSecBG' :' before:bg-black ',
-            'cardBg':' bg-seawhile-light ',
+            'secBg': ' bg-seawhile-dark',
+            'beforeSecBG' :' before:bg-pineBlack ',
+            'cardBg':' bg-seawhile-dark ',
             'secBgHover': ' hover:bg-seawhile-medium ',
             'progressBarBg':' bg-seawhile-medium ',
             'progressBarBorder': ' border-seawhile-medium ',
-            'mainText': ' text-seawhile-dark ',
-            'secText': ' text-black ',
+            'mainText': ' text-seawhile-light ',
+            'secText': ' text-pineBlack ',
             'mainHeaderText': ' text-white ',
-            'secHeaderText': 'text-dark',
-            'aviText': ' text-[#FF5733] ',
-            'borderB': ' border-b-dark ',
+            'secHeaderText': 'text-pineBlack',
+            'aviText': ' text-seawhile-dark ',
+            'borderB': ' border-b-light ',
             'iconColor':'#FFFFFF',
             'particleRec':'#900C3F',
             'particleCir': '#FF5733',
@@ -69,6 +69,4 @@ export const THEMES = {
     // }
 }
 
-export const ThemeContext = createContext(
-    THEMES.light    
-  );
+export const ThemeContext = createContext();
