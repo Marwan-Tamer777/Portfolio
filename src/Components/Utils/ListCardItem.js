@@ -6,10 +6,13 @@ import { ThemeContext } from '../../utils/Context/ThemeContext';
     expected prop is an object with the details of the card.
 
     all keys are accepted as string.
-    the optionalTitle would be disaplyed if no value was provided
+    if a main/sec URL is provided then the main title will be turned into a link to that url
+    the optionalTitle would be displayed if no value was provided.
     {
         mainTitle:"",
+        mainURL:"",
         secTitle:"",
+        secURL:"",
         optionalTitle:"",
         highLighted:"",
         description:"",
@@ -24,19 +27,31 @@ function ListCardItem(props){
         <div className={`my-4 flex flex-row`}>
 
            <div className={`basis-[30%] flex flex-col`}>
-               <p className={`${colors.mainText} text-lg font-extrabold m-3`}>{props.mainTitle}</p>
+                {props.mainURL != undefined ? (
+                    <a href={props.mainURL} target="_blank">
+                        <p className={`${colors.linkText} scale-up hover:underline text-lg font-extrabold m-3`}>{props.mainTitle}</p>
+                    </a>
+                ):(
+                    <p className={`${colors.mainText} text-lg font-extrabold m-3`}>{props.mainTitle}</p>
+                )}
                <div>
-                    <span className={`${colors.mainText} font-bold mx-2`}>
+                    <span className={`${colors.mainText} text-sm font-semibold mx-2`}>
                        {props.optionalTitle != undefined ?(props.optionalTitle) : (null)}
                     </span>
-                    <span className={`${colors.secBg + colors.secHeaderText} p-1 mx-2 text-xs`}>
+                    <span className={`${colors.secBg + colors.secHeaderText} p-1 mx-2 text-xs inline-block`}>
                         {props.highLighted}
                     </span>
                </div>
            </div>
 
            <div className={`basis-[70%] m-3`}>
-               <p className={`${colors.mainText} text-lg font-extrabold`}>{props.secTitle}</p>
+           {props.secURL != undefined ? (
+                    <a href={props.secURL} target="_blank">
+                        <p className={`${colors.linkText} scale-up hover:underline text-lg font-extrabold`}>{props.secTitle}</p>
+                    </a>
+                ):(
+                    <p className={`${colors.mainText} text-lg font-extrabold`}>{props.secTitle}</p>
+            )}
                <span className={`${colors.secText} text-sm`}>
                        {props.description}
                 </span>

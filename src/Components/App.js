@@ -4,6 +4,7 @@ import NavBarInfoRight from './Navs/NavBarRight';
 import Welcome from './Welcome';
 import PricePlans from './PricePlans/PricePlans';
 import Education from './Education/Education';
+import Experiences from './Experiences/Experiences';
 import { ThemeContext,THEMES } from '../utils/Context/ThemeContext';
 
 function App(){
@@ -11,9 +12,9 @@ function App(){
 
   useEffect(()=>{
     /* for some reason the object tags don't load the svg immediately the first time the website loads.
-    so this useEffect is meant to run once when the wesbite gets mounted for the first time
-    thne wait a less than a second for the SVGs objects to load before changing their colors to
-    the approperiate theme.
+    so this useEffect is meant to run once when the website gets mounted for the first time
+    then wait a less than a second for the SVGs objects to load before changing their colors to
+    the appropriate theme.
     it is a fallback to ensure that the first time the website
     is loaded the right theme is loaded with it instead of defaulting to a specific theme
     */
@@ -75,6 +76,7 @@ function App(){
                 <Welcome/>
                 <PricePlans/>
                 <Education/>
+                <Experiences/>
               </div>
               <NavBarInfoRight rerender={rerenderApp}/>
         

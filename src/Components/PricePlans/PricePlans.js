@@ -13,7 +13,7 @@ function PricePlans(){
             <h2 className={`w-fit ${colors.mainText} mx-auto my-2 text-3xl font-extrabold`}>
                 Price Plans & Services
             </h2>
-            <p className={` w-1/3 ${colors.aviText} mx-auto my-4`}>
+            <p className={` w-1/3 ${colors.aviText} mx-auto text-center my-4`}>
                 This is the standard pricing and services, any extra or special requests can be
                 negoitaited!  
             </p>
