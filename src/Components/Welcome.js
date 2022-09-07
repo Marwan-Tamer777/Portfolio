@@ -22,7 +22,7 @@ function Welcome(){
             <div className={`${colors.secHeaderText} text-sm w-1/3 m-5`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
             </div>
-            <a href="#" className={`${colors.mainBg} py-3 px-6 scale-up rounded-md m-5  w-fit ${colors.secBgHover}`}>
+            <a href="https://www.upwork.com/freelancers/~016c0d143620d2f2fe" className={`${colors.mainBg} py-3 px-6 scale-up rounded-md m-5  w-fit ${colors.secBgHover}`}>
                 HIRE ME {`-->`}
             </a>
                 
