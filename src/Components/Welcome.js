@@ -9,7 +9,7 @@ function Welcome(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
-        <div className={`${colors.secBg} relative rounded-2xl shadow-2xl flex flex-col p-5`}>
+        <div id="Welcome" className={`${colors.secBg} relative rounded-2xl shadow-2xl flex flex-col p-5`}>
 
             <object data={avatarPic} className={`absolute -right-1 bottom-0 max-h-full`}/>
             <object data={particleRectangle} className={`absolute left-[50%] top-[5%]`}/>

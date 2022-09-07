@@ -1,5 +1,5 @@
 import themeChange from '../../Images/theme-change.svg'
-import contatUs from '../../Images/nav-contact-us.svg'
+import contactUs from '../../Images/nav-contact-us.svg'
 import education from '../../Images/nav-education.svg'
 import home from '../../Images/nav-home.svg'
 import prices from '../../Images/nav-prices.svg'
@@ -38,12 +38,12 @@ function NavBarInfoRight(props){
             <object data={themeChange} style={{"pointer-events": "none"}}/>
             </div>
 
-            <div className='w-full flex flex-col justify-center items-center'>
-            <a href="#" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={home} className=" m-auto object-fill"/></a>
-            <a href="#" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={services} className="m-auto object-fill"/></a>
-            <a href="#" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={education} className="m-auto object-fill"/></a>
-            <a href="#" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={prices} className="m-auto object-fill"/></a>
-            <a href="#" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={contatUs} className="m-auto object-fill"/></a>
+            <div className='w-full flex flex-col justify-center items-center'>            
+            <a href="#Welcome" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={home} className=" m-auto object-fill" style={{"pointer-events": "none"}}/></a>
+            <a href="#Education" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={education} className="m-auto object-fill" style={{"pointer-events": "none"}}/></a>
+            <a href="#Experiences" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={services} className="m-auto object-fill" style={{"pointer-events": "none"}}/></a>
+            <a href="#PricePlans" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={prices} className="m-auto object-fill" style={{"pointer-events": "none"}}/></a>
+            <a href="#ContactUs" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={contactUs} className="m-auto object-fill" style={{"pointer-events": "none"}}/></a>
             </div>
         </div>
     ) 

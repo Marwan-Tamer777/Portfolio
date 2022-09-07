@@ -9,7 +9,7 @@ function PricePlans(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
-        <div className={`p-5 my-5`}>
+        <div id="PricePlans" className={`p-5 my-5`}>
             <h2 className={`w-fit ${colors.mainText} mx-auto my-2 text-3xl font-extrabold`}>
                 Price Plans & Services
             </h2>

@@ -1,5 +1,4 @@
 import avatar from "../../Images/avatar-circle.svg"
-import facebook from "../../Images/icon-facebook.svg"
 import linkedin from "../../Images/icon-linkedin.svg"
 import github from "../../Images/icon-github.svg"
 import downloadIcon from '../../Images/download-cv.svg'
@@ -61,7 +60,6 @@ function NavBarInfoLeft(){
                 <p className={`${colors.mainHeaderText} text-lg font-bold `}>Front-End Developer</p>
 
                 <div className={`flex flex-row justify-around items-around w-full py-4 ${colors.borderB} border-b-2`}>
-                    <a href="https://www.facebook.com/marwam.tamer" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up w-7`}><object data={facebook} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
                     <a href="https://www.linkedin.com/in/marwan-tamer/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={linkedin} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
                     <a href="https://github.com/thetimelord777/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={github} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
                 </div>

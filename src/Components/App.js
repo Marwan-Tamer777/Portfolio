@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import PricePlans from './PricePlans/PricePlans';
 import Education from './Education/Education';
 import Experiences from './Experiences/Experiences';
+import ContactUs from './ContactUs/ContactUs';
 import { ThemeContext,THEMES } from '../utils/Context/ThemeContext';
 
 function App(){
@@ -74,9 +75,10 @@ function App(){
               <NavBarInfoLeft/>
               <div className={`flex-grow-[15] self-start basis-0 rounded-2xl`}>
                 <Welcome/>
-                <PricePlans/>
                 <Education/>
                 <Experiences/>
+                <PricePlans/>
+                <ContactUs/>
               </div>
               <NavBarInfoRight rerender={rerenderApp}/>
         

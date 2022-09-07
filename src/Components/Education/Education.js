@@ -44,14 +44,14 @@ function Education(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
-        <div className={`p-5 my-5`}>
+        <div id="Education" className={`p-5 my-5`}>
             <h2 className={`${colors.mainText} w-fit mx-auto my-2 text-3xl font-extrabold`}>
                 Education & Certifications
             </h2>
             <p className={`${colors.aviText} w-1/2 mx-auto text-center my-4`}>
                 This part is about my current and past education! From college degrees to online degrees all related to Web Development            
             </p>
-            <div className={`flex flex-col ${colors.cardBg} p-5 rounded-t-2xl`}>
+            <div className={`flex flex-col ${colors.cardBg} p-5 rounded-t-3xl`}>
                 {educationListItems.map((item,index)=>(
                     <ListCardItem {...item} key={index}/>
                 ))}

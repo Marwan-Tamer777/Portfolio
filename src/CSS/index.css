@@ -13,8 +13,13 @@
 }
 
 @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+html { font-family: 'Inter', sans-serif; 
+scroll-behavior: smooth;}
 
 .scale-up{
     @apply transition hover:-translate-y-2 hover:scale-[1.10]
+}
+
+.invalid-input{
+    @apply bg-red-500 transition -translate-y-2 scale-[1.05]
 }
