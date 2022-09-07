@@ -13,8 +13,9 @@
 }
 
 @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; 
-scroll-behavior: smooth;}
+html { font-family: 'Inter', sans-serif;scroll-behavior: smooth;
+     @apply sm:text-xs lg:text-base
+ }
 
 .scale-up{
     @apply transition hover:-translate-y-2 hover:scale-[1.10]

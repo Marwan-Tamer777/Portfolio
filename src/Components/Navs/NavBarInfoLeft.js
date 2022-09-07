@@ -77,13 +77,13 @@ function NavBarInfoLeft(){
     return(
         <div>
             <div onClick={openNav}>
-                <object data={drawer} id="NavDrawer"  className=" inline md:hidden object-fill" style={{"pointer-events": "none"}}/>
+                <object data={drawer} id="NavDrawer"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
             </div>
-            <div id="NavBarInfoLeft" className={`hidden md:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-5 rounded-r-2xl
+            <div id="NavBarInfoLeft" className={`hidden lg:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-5 rounded-r-2xl
             justify-center items-center p-5`}>
                 
                 <div onClick={closeNav}>
-                    <object data={close} id="NavClose" className="inline md:hidden object-fill" style={{"pointer-events": "none"}}/>
+                    <object data={close} id="NavClose" className="inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
                 </div>
                 <object data={avatar}/>
                 <p className={`${colors.mainHeaderText} text-lg font-bold `}>Marwan Tamer</p>
