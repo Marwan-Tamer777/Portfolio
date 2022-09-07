@@ -15,10 +15,10 @@ function PricePlans(){
             </h2>
             <p className={` w-1/3 ${colors.aviText} mx-auto text-center my-4`}>
                 This is the standard pricing and services, any extra or special requests can be
-                negoitaited!  
+                negotiated!  
             </p>
 
-            <div className={`flex flex-row justify-between`}>
+            <div className={`flex flex-row flex-wrap justify-between`}>
 
                 <div className={`${colors.cardBg} rounded-l-3xl shadow-2xl p-3 w-[31%]
                  flex flex-col justify-center items-center`}>

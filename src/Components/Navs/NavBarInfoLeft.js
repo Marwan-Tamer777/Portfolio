@@ -2,6 +2,8 @@ import avatar from "../../Images/avatar-circle.svg"
 import linkedin from "../../Images/icon-linkedin.svg"
 import github from "../../Images/icon-github.svg"
 import downloadIcon from '../../Images/download-cv.svg'
+import drawer from "../../Images/nav-drawer.svg"
+import close from "../../Images/nav-close.svg"
 import NavSkillsList from "./NavSkillsList"
 import CV from '../../Resources/Marwan-Tamer-Resume-U.pdf'
 import { useContext } from "react"
@@ -47,14 +49,42 @@ const softSkillsList= {
         'Project Management','Agile development' ,'Scrum framework','Time management'
     ]
 }
+
+
+/*
+ The left nav drawer logic for mobile phones needs reconsidering as 
+    1-the theme updates dynamically from the App parent 
+    component which makes the SVG not load properly
+    2-once the user clicks on the menu it fixed to the open/flex and close/none display ignoring
+    if the user widens the screen/css media queries
+ */
+function openNav() {
+    console.log("Open")
+    document.getElementById("NavDrawer").style.display="none"
+    document.getElementById("NavClose").style.display="inline"
+    document.getElementById("NavBarInfoLeft").style.display = "flex";
+  }
+  
+  function closeNav() {
+    console.log("Close")
+    document.getElementById("NavDrawer").style.display="inline"
+    document.getElementById("NavClose").style.display="none"
+    document.getElementById("NavBarInfoLeft").style.display = "none";
+  }
 function NavBarInfoLeft(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
-        <div className={`flex-grow-[3] self-start basis-0 top-0 ${colors.secBg} mr-5 rounded-r-2xl
-        flex flex-col justify-center items-center p-5`}>
-
+        <div>
+            <div onClick={openNav}>
+                <object data={drawer} id="NavDrawer"  className=" inline md:hidden object-fill" style={{"pointer-events": "none"}}/>
+            </div>
+            <div id="NavBarInfoLeft" className={`hidden md:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-5 rounded-r-2xl
+            justify-center items-center p-5`}>
                 
+                <div onClick={closeNav}>
+                    <object data={close} id="NavClose" className="inline md:hidden object-fill" style={{"pointer-events": "none"}}/>
+                </div>
                 <object data={avatar}/>
                 <p className={`${colors.mainHeaderText} text-lg font-bold `}>Marwan Tamer</p>
                 <p className={`${colors.mainHeaderText} text-lg font-bold `}>Front-End Developer</p>
@@ -100,6 +130,7 @@ function NavBarInfoLeft(){
                     </div>     
                 </a>
         </div>
+    </div>
     )
 }
 
