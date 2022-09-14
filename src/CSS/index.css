@@ -14,7 +14,7 @@
 
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif;scroll-behavior: smooth;
-     @apply sm:text-xs lg:text-base
+     @apply text-xs lg:text-base
  }
 
 .scale-up{

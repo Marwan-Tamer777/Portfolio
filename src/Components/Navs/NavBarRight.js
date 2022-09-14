@@ -31,7 +31,7 @@ function NavBarInfoRight(props){
     }
 
     return(
-        <div className={`flex-grow-[2] flex-shrink-[1] basis-0 self-start  sticky top-[15%] ${colors.secBg} ml-5 rounded-2xl
+        <div className={`flex-grow-[1] flex-shrink-[1] basis-0 self-start  sticky top-[15%] ${colors.secBg} ml-1 lg:ml-5 rounded-2xl
         flex flex-col justify-start`}>
 
             <div id={'ThemeIcon'} className=" self-start mx-auto my-[20%]">

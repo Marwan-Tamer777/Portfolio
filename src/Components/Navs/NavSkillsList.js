@@ -42,7 +42,7 @@ function NavSkillsList(props){
                             </div>
                             </>) 
                             :
-                            (<p className={`${colors.secHeaderText} text-sm`}>{item}</p>)
+                            (<p className={`${colors.secHeaderText} text-sm my-1`}>{item}</p>)
                         }
                         
                     </div>

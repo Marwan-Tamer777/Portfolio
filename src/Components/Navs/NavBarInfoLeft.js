@@ -79,7 +79,7 @@ function NavBarInfoLeft(){
             <div onClick={openNav}>
                 <object data={drawer} id="NavDrawer"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
             </div>
-            <div id="NavBarInfoLeft" className={`hidden lg:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-5 rounded-r-2xl
+            <div id="NavBarInfoLeft" className={`hidden lg:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-1 lg:mr-5 rounded-r-2xl
             justify-center items-center p-5`}>
                 
                 <div onClick={closeNav}>
