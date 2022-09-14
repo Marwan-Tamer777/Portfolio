@@ -10,10 +10,10 @@ function PricePlans(){
 
     return(
         <div id="PricePlans" className={`p-5 my-5`}>
-            <h2 className={`w-fit ${colors.mainText} mx-auto my-2 text-3xl font-extrabold`}>
+            <h2 className={`${colors.mainText} text-center my-2 text-3xl font-extrabold`}>
                 Price Plans & Services
             </h2>
-            <p className={` w-1/3 ${colors.aviText} mx-auto text-center my-4`}>
+            <p className={` ${colors.aviText} lg:w-1/2 lg:mx-auto text-center my-4`}>
                 This is the standard pricing and services, any extra or special requests can be
                 negotiated!  
             </p>

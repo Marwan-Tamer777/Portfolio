@@ -59,35 +59,33 @@ const softSkillsList= {
     if the user widens the screen/css media queries
  */
 function openNav() {
-    console.log("Open")
+    document.getElementById("NavBarInfoLeft").style.left = "0";
     document.getElementById("NavDrawer").style.display="none"
-    document.getElementById("NavClose").style.display="inline"
-    document.getElementById("NavBarInfoLeft").style.display = "flex";
   }
   
   function closeNav() {
-    console.log("Close")
+    document.getElementById("NavBarInfoLeft").style.left = "-100%";
     document.getElementById("NavDrawer").style.display="inline"
-    document.getElementById("NavClose").style.display="none"
-    document.getElementById("NavBarInfoLeft").style.display = "none";
   }
 function NavBarInfoLeft(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
-        <div>
-            <div onClick={openNav}>
+        <>
+            <div onClick={openNav} className={`fixed z-10`}>
                 <object data={drawer} id="NavDrawer"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
             </div>
-            <div id="NavBarInfoLeft" className={`hidden lg:flex flex-col flex-grow-[3] flex-shrink-[2] basis-0 self-start  top-0 ${colors.secBg} mr-1 lg:mr-5 rounded-r-2xl
-            justify-center items-center p-5`}>
+            <div id="NavBarInfoLeft" className={`flex flex-col flex-grow-[2] flex-shrink-[2] self-start  top-0 ${colors.secBg} mr-1 lg:mr-5 rounded-r-2xl
+            justify-center items-center fixed lg:relative left-[-100%] lg:left-0 p-5 z-10`} style={{'transition': ' 0.5s'}}>
                 
                 <div onClick={closeNav}>
                     <object data={close} id="NavClose" className="inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
                 </div>
-                <object data={avatar}/>
-                <p className={`${colors.mainHeaderText} text-lg font-bold `}>Marwan Tamer</p>
-                <p className={`${colors.mainHeaderText} text-lg font-bold `}>Front-End Developer</p>
+
+                <object data={avatar} className={`w-[70%]`}/>
+                
+                <p className={`${colors.mainHeaderText} text-center text-lg font-bold `}>Marwan Tamer</p>
+                <p className={`${colors.mainHeaderText} text-center text-lg font-bold `}>Front-End Developer</p>
 
                 <div className={`flex flex-row justify-around items-around w-full py-4 ${colors.borderB} border-b-2`}>
                     <a href="https://www.linkedin.com/in/marwan-tamer/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={linkedin} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
@@ -130,7 +128,7 @@ function NavBarInfoLeft(){
                     </div>     
                 </a>
         </div>
-    </div>
+    </>
     )
 }
 
