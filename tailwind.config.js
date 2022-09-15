@@ -24,7 +24,7 @@ module.exports = {
       },
 
       animation: {
-        'fill-progress': 'fill 1s ease-in-out',
+        'fill-progress': 'fill 1s ease-in',
       },
 
       keyframes: {

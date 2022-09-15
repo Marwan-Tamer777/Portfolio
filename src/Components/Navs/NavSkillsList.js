@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect} from 'react';
+import {NavSkillsListProgressBarObserver} from "../../utils/Transitions/IntersectionObservers"
 import { ThemeContext } from '../../utils/Context/ThemeContext';
 
 /*
@@ -22,6 +23,14 @@ function NavSkillsList(props){
 
     const {theme,code,colors} = useContext(ThemeContext)
 
+    useEffect(()=>{
+        let observer = new IntersectionObserver(NavSkillsListProgressBarObserver);
+        let progressBars = document.getElementsByClassName("LeftNavProgressBar")
+        
+        Array.from(progressBars).forEach((elem)=>(
+            observer.observe(elem)
+        ))
+    })
     return(
         <div className={`w-full py-4 border-b-2`}>
             <p className='mx-auto w-fit'>{props.list.title}</p>
@@ -37,8 +46,8 @@ function NavSkillsList(props){
                                 <p className={colors.secHeaderText}>{item.title}</p>
                                 <p className={colors.secHeaderText}>{item.value +'%'}</p>
                             </div>
-                            <div className={`rounded-3xl p-[1px] ${colors.progressBarBorder} border-[0.5px]`}>
-                                <div className={`h-[3px] ${colors.progressBarBg} rounded-3xl transition animate-fill-progress`} style={{width: item.value+'%'}}></div>
+                            <div className={` rounded-3xl p-[1px] ${colors.progressBarBorder} border-[0.5px]`}>
+                                <div className={`LeftNavProgressBar h-[3px] ${colors.progressBarBg} rounded-3xl`} style={{width: item.value+'%'}}></div>
                             </div>
                             </>) 
                             :

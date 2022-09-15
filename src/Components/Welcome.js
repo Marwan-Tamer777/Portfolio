@@ -16,8 +16,8 @@ function Welcome(){
             <object data={particleCircle} className={`absolute left-[20%] bottom-[5%]`}/>
             
             <h1 className={`${colors.mainHeaderText} font-extrabold m-5 text-5xl`}>
-                I'm Marwan Tamer<br className=' hidden lg:block'/>
-                <span className={`${colors.secHeaderText}`}>Front-End</span> Developer
+                I'm Marwan Tamer<br/>
+                A <span className={`${colors.secHeaderText}`}>Front-End</span> Developer
             </h1>
             <div className={`${colors.secHeaderText} text-sm lg:w-1/2 m-5`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
