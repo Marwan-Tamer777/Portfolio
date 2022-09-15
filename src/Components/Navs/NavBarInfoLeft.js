@@ -60,26 +60,26 @@ const softSkillsList= {
  */
 function openNav() {
     document.getElementById("NavBarInfoLeft").style.left = "0";
-    document.getElementById("NavDrawer").style.display="none"
-  }
+    document.getElementById("NavDrawerLeft").style.display="none"
+}
   
-  function closeNav() {
+function closeNav() {
     document.getElementById("NavBarInfoLeft").style.left = "-100%";
-    document.getElementById("NavDrawer").style.display="inline"
-  }
+    document.getElementById("NavDrawerLeft").style.display="inline"
+}
 function NavBarInfoLeft(){
     const {theme,code,colors} = useContext(ThemeContext)
 
     return(
         <>
-            <div onClick={openNav} className={`fixed z-10`}>
-                <object data={drawer} id="NavDrawer"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
+            <div onClick={openNav} className={`fixed z-10 top-[2%] left-[2%]`}>
+                <object data={drawer} id="NavDrawerLeft"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
             </div>
             <div id="NavBarInfoLeft" className={`flex flex-col flex-grow-[2] flex-shrink-[2] self-start  top-0 ${colors.secBg} mr-1 lg:mr-5 rounded-r-2xl
             justify-center items-center fixed lg:relative left-[-100%] lg:left-0 p-5 z-10`} style={{'transition': ' 0.5s'}}>
                 
                 <div onClick={closeNav}>
-                    <object data={close} id="NavClose" className="inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
+                    <object data={close} id="NavCloseLeft" className="inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
                 </div>
 
                 <object data={avatar} className={`w-[70%]`}/>

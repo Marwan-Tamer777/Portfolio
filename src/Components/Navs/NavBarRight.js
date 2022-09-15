@@ -4,6 +4,8 @@ import education from '../../Images/nav-education.svg'
 import home from '../../Images/nav-home.svg'
 import prices from '../../Images/nav-prices.svg'
 import services from '../../Images/nav-services.svg'
+import drawer from "../../Images/nav-drawer.svg"
+import close from "../../Images/nav-close.svg"
 import {useContext,useEffect} from 'react'
 import { ThemeContext,THEMES } from '../../utils/Context/ThemeContext'
 
@@ -30,10 +32,30 @@ function NavBarInfoRight(props){
         })
     }
 
-    return(
-        <div className={`flex-grow-[1] flex-shrink-[1] self-start  sticky top-[15%] ${colors.secBg} ml-1 lg:ml-5 rounded-2xl
-        flex flex-col justify-start`}>
+    function openNav() {
+        document.getElementById("NavBarRight").style.position = "sticky"
+        document.getElementById("NavBarRight").style.right = "0";
+        document.getElementById("NavDrawerRight").style.display="none"
+    }
+      
+    function closeNav() {
+        document.getElementById("NavBarRight").style.position = "fixed"
+        document.getElementById("NavBarRight").style.right = "-100%";
+        document.getElementById("NavDrawerRight").style.display="inline"
+    }
 
+    return(
+        <>
+        <div onClick={openNav} className={`fixed z-10 top-[2%] right-[2%]`}>
+                <object data={drawer} id="NavDrawerRight"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
+        </div>    
+        <div id="NavBarRight" className={`flex-grow-[1] flex-shrink-[1] self-start fixed lg:sticky right-[-100%] lg:right-0 top-[15%] ${colors.secBg} ml-1 lg:ml-5 rounded-2xl
+        flex flex-col justify-start`} style={{'transition': ' 0.5s'}}>
+
+            
+            <div onClick={closeNav} className=" self-start mx-auto my-[20%]">
+                    <object data={close} id="NavCloseRight" className="object-fill" style={{"pointer-events": "none"}}/>
+            </div>
             <div id={'ThemeIcon'} className=" self-start mx-auto my-[20%]">
             <object data={themeChange} style={{"pointer-events": "none"}}/>
             </div>
@@ -46,6 +68,7 @@ function NavBarInfoRight(props){
             <a href="#ContactUs" className={`p-2 mx-2 my-5 rounded-full scale-up  ${colors.secBgHover + colors.mainBg}`}><object data={contactUs} className="m-auto object-fill" style={{"pointer-events": "none"}}/></a>
             </div>
         </div>
+        </>
     ) 
 }
 
