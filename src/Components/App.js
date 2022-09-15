@@ -44,7 +44,7 @@ function App(){
         <div className={`App flex flex-row ${theme.colors.mainBg + theme.colors.mainText} `} >
               
               <NavBarInfoLeft/>
-              <div id="main" className={`flex-grow-[20] fex-shrink-[7] self-start  rounded-2xl`} style={{'transition': '0.5s'}}>
+              <div id="main" className={`flex-grow-[20] flex-shrink-[7] self-start  rounded-2xl relative`} style={{'transition': '0.5s'}}>
                 <Welcome/>
                 <Education/>
                 <Experiences/>

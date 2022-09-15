@@ -75,8 +75,9 @@ function NavBarInfoLeft(){
             <div onClick={openNav} className={`fixed z-10 top-[2%] left-[2%]`}>
                 <object data={drawer} id="NavDrawerLeft"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
             </div>
-            <div id="NavBarInfoLeft" className={`flex flex-col flex-grow-[2] flex-shrink-[2] self-start  top-0 ${colors.secBg} mr-1 lg:mr-5 rounded-r-2xl
-            justify-center items-center fixed lg:relative left-[-100%] lg:left-0 p-5 z-10`} style={{'transition': ' 0.5s'}}>
+            <div id="NavBarInfoLeft" className={`flex flex-col flex-grow-[2] flex-shrink-[2] ${colors.secBg} rounded-r-2xl
+            justify-center items-center fixed lg:relative overflow-y-scroll h-full lg:overflow-y-visible lg:h-fit
+            left-[-100%] lg:left-0 top-0 bottom-0 p-5 pt-[40rem] lg:pt-5 mr-1 lg:mr-5 z-10`} style={{'transition': ' 0.5s'}}>
                 
                 <div onClick={closeNav}>
                     <object data={close} id="NavCloseLeft" className="inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
@@ -109,7 +110,7 @@ function NavBarInfoLeft(){
                     </div>
 
                     <div className="flex flex-row justify-between py-1">
-                        <p className={`${colors.mainBg}p-1`}>Job opportunities:</p>
+                        <p className={`${colors.mainBg}p-1`}>Job requests:</p>
                         <p className={colors.aviText}>Open</p>
                     </div>
                 </div>
