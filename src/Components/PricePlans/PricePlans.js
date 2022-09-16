@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import includedIcon from '../../Images/tick-right.svg'
-import notIncludedIcon from '../../Images/tick-wrong.svg'
+import React, { useContext, useEffect } from 'react';
+import { PriceCardsObserver } from '../../utils/Transitions/IntersectionObservers';
 import PlanItem from './PlanItem';
 import { ThemeContext } from '../../utils/Context/ThemeContext';
 
@@ -8,6 +7,15 @@ function PricePlans(){
 
     const {theme,code,colors} = useContext(ThemeContext)
 
+    useEffect(()=>{
+        let observer = new IntersectionObserver(PriceCardsObserver);
+        let progressBars = document.getElementsByClassName("PriceCard")
+        let delayCounter = 1;
+        Array.from(progressBars).forEach((elem)=>(
+            elem.style.animationDuration= `${750*(delayCounter++)}ms`,
+            observer.observe(elem)
+        ))
+    })
     return(
         <div id="PricePlans" className={`p-5 my-5`}>
             <h2 className={`${colors.mainText} text-center my-2 text-3xl font-extrabold`}>
@@ -20,7 +28,7 @@ function PricePlans(){
 
             <div className={`flex flex-row flex-wrap justify-between`}>
 
-                <div className={`${colors.cardBg} rounded-l-3xl shadow-2xl p-3 w-[31%]
+                <div className={`${colors.cardBg} PriceCard rounded-l-3xl shadow-2xl p-3 w-[31%]
                  flex flex-col justify-center items-center`}>
                     <p className={`${colors.mainText} text-xl font-extrabold my-4`}>Silver</p>
                     <p className={`${colors.mainText} text-2xl my-2`}>$15.00 <span className={` text-xs`}>/hour</span></p>
@@ -43,7 +51,7 @@ function PricePlans(){
                         ORDER NOW</p> */}
                 </div>
 
-                <div className={`${colors.cardBg  + colors.beforeSecBG} shadow-2xl p-3 w-[31%] relative
+                <div className={`${colors.cardBg  + colors.beforeSecBG} PriceCard shadow-2xl p-3 w-[31%] relative
                  flex flex-col justify-center items-center before:content-['Most_popular'] before:w-full before:text-center before:absolute before:top-0`}>
                     
                     <p className={`${colors.mainText} text-xl font-extrabold my-4`}>Gold</p>
@@ -67,7 +75,7 @@ function PricePlans(){
                         ORDER NOW</p> */}
                 </div>
 
-                <div className={`${colors.cardBg} rounded-r-3xl shadow-2xl p-3 w-[31%]
+                <div className={`${colors.cardBg} PriceCard rounded-r-3xl shadow-2xl p-3 w-[31%]
                  flex flex-col justify-center items-center`}>
                     <p className={`${colors.mainText} text-xl font-extrabold my-4`}>Diamond</p>
                     <p className={`${colors.mainText} text-2xl my-2`}>$80.00 <span className={` text-xs`}>/hour</span></p>

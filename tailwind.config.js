@@ -24,15 +24,19 @@ module.exports = {
       },
 
       animation: {
-        'fill-progress': 'fill 1s ease-in',
+        'fillProgress': 'fill 1s ease-in',
+        'slideInLeft': 'slideInLeft 1s ease-out'
       },
 
       keyframes: {
         fill: {
-          '0%': { transform: 'scaleX(0)' },
-          // '25%': { transform: 'scaleX(1) translateX(70%)' },
-          // '50%': { transform: 'scaleX(0) translateX(-150%)' },
-          
+          '0%': { 'width':0 },
+        },
+        slideInLeft:{
+          '0%':{'transform': 'translateX(-50%)',
+                'filter':"blur(5px)",
+                'opacity':0
+          }
         }
       },
 

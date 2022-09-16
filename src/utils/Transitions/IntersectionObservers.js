@@ -1,10 +1,20 @@
 function NavSkillsListProgressBarObserver(entries,observer){
     entries.forEach((entry)=>{
-        console.log("Observe: ",entry)
         if(entry.isIntersecting){
-            entry.target.classList.add("animate-fill-progress")
+            entry.target.classList.add("animate-fillProgress")
         }
     })
 }
 
-export {NavSkillsListProgressBarObserver};
+function PriceCardsObserver(entries,observer){
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("animate-slideInLeft")
+        }
+        // else{
+        //     entry.target.classList.remove("animate-slideInLeft")
+        // }
+    })
+}
+
+export {NavSkillsListProgressBarObserver,PriceCardsObserver};
