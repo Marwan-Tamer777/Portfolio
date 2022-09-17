@@ -20,7 +20,8 @@ function Welcome(){
                 A <span className={`${colors.secHeaderText}`}>Front-End</span> Developer
             </h1>
             <div className={`${colors.secHeaderText} text-sm lg:w-1/2 m-5`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
+                Hello there! I hope your day has been going great! I am a computer science undergraduate at FCAI eager to learn new tools and skills! 
+                And make meaningful projects for clients to help post their online presence and create platforms to help people expand their businesses!
             </div>
             <a href="https://www.upwork.com/freelancers/~016c0d143620d2f2fe" target="_blank" className={`${colors.mainBg} py-3 px-6 scale-up rounded-md m-5  w-fit ${colors.secBgHover}`}>
                 HIRE ME {`-->`}
