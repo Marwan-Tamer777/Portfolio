@@ -9,10 +9,10 @@ function NavSkillsListProgressBarObserver(entries,observer){
 function PriceCardsObserver(entries,observer){
     entries.forEach((entry)=>{
         if(entry.isIntersecting){
-            entry.target.classList.add("animate-slideInLeft")
+            entry.target.classList.add("FadeInLTR")
         }
         // else{
-        //     entry.target.classList.remove("animate-slideInLeft")
+        //     entry.target.classList.remove("FadeInLTR")
         // }
     })
 }

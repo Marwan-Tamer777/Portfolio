@@ -1204,10 +1204,6 @@ video {
   transition-duration: 150ms;
 }
 
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 html {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
@@ -1251,6 +1247,23 @@ html {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.PriceCard{
+  transition: all 1s;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.FadeInLTR{
+  opacity: 1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .before\:absolute::before {

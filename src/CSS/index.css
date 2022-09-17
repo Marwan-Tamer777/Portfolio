@@ -24,3 +24,16 @@ html { font-family: 'Inter', sans-serif;scroll-behavior: smooth;
 .invalid-input{
     @apply bg-red-500 transition -translate-y-2 scale-[1.05]
 }
+
+.PriceCard{
+    transition: all 1s;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.FadeInLTR{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}

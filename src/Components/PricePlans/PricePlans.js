@@ -12,7 +12,7 @@ function PricePlans(){
         let progressBars = document.getElementsByClassName("PriceCard")
         let delayCounter = 1;
         Array.from(progressBars).forEach((elem)=>(
-            elem.style.animationDuration= `${750*(delayCounter++)}ms`,
+            elem.style.transitionDelay= `${500*(delayCounter++)}ms`,
             observer.observe(elem)
         ))
     })

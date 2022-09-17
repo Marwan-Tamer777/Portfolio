@@ -33,7 +33,7 @@ function NavBarInfoRight(props){
     }
 
     function openNav() {
-        setTimeout(()=>(document.getElementById("NavBarRight").style.position = "sticky"),500)
+        document.getElementById("NavBarRight").style.position = "sticky"
         document.getElementById("NavBarRight").style.right = "0";
         document.getElementById("NavDrawerRight").style.display="none"
     }
@@ -50,7 +50,7 @@ function NavBarInfoRight(props){
                 <object data={drawer} id="NavDrawerRight"  className=" inline lg:hidden object-fill" style={{"pointer-events": "none"}}/>
         </div>    
         <div id="NavBarRight" className={`flex-grow-[1] flex-shrink-[1] self-start fixed lg:sticky right-[-10%] lg:right-0 top-[15%] ${colors.secBg} ml-1 lg:ml-5 rounded-2xl
-        flex flex-col justify-start`} style={{'transition': ' 0.5s ease-in'}}>
+        flex flex-col justify-start`}>
 
             
             <div onClick={closeNav} className=" self-start mx-auto my-[20%]">
