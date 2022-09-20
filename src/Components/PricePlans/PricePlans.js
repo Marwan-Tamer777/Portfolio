@@ -69,7 +69,7 @@ function PricePlans(){
                         <PlanItem included={0} text={"BackEnd"} />
                         <PlanItem included={0} text={"Node.js"} />
                         <PlanItem included={0} text={"REST API"} />
-                        <PlanItem included={0} text={"dataBase"} />
+                        <PlanItem included={0} text={"DataBase"} />
                     </div>
                     {/* <p className={`${colors.mainText + colors.cardBg} rounded-full shadow-2xl text-sm font-bold py-3 px-10 my-2 scale-up`}>
                         ORDER NOW</p> */}
@@ -92,7 +92,7 @@ function PricePlans(){
                         <PlanItem included={1} text={"BackEnd"} />
                         <PlanItem included={1} text={"Node.js"} />
                         <PlanItem included={1} text={"REST API"} />
-                        <PlanItem included={1} text={"SQL database/MongoDB"} />
+                        <PlanItem included={1} text={"MongoDB"} />
                     </div>
                     {/* <p className={`${colors.mainText + colors.cardBg} rounded-full shadow-2xl text-sm font-bold py-3 px-10 my-2 scale-up`}>
                         ORDER NOW</p> */}

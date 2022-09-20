@@ -810,31 +810,6 @@ video {
           animation: fill 1s ease-in;
 }
 
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    opacity: 0;
-  }
-}
-
-.animate-slideInLeft {
-  -webkit-animation: slideInLeft 1s ease-out;
-          animation: slideInLeft 1s ease-out;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1264,6 +1239,12 @@ html {
           filter: blur(0px);
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+@media(prefers-reduced-motion){
+  *{
+    transition: none;
+  }
 }
 
 .before\:absolute::before {
