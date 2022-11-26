@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import PricePlans from './PricePlans/PricePlans';
 import Education from './Education/Education';
 import Experiences from './Experiences/Experiences';
+import Projects from './Projects/Projects';
 import ContactUs from './ContactUs/ContactUs';
 import reColorSVGs from '../utils/Transitions/reColorsSVGs';
 import { ThemeContext,THEMES } from '../utils/Context/ThemeContext';
@@ -48,6 +49,7 @@ function App(){
                 <Welcome/>
                 <Education/>
                 <Experiences/>
+                <Projects/>
                 <PricePlans/>
                 <ContactUs/>
               </div>
