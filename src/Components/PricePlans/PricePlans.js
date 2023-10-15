@@ -78,7 +78,7 @@ function PricePlans(){
                 <div className={`${colors.cardBg} PriceCard rounded-r-3xl shadow-2xl p-3 w-[31%]
                  flex flex-col justify-center items-center`}>
                     <p className={`${colors.mainText} text-xl font-extrabold my-4`}>Diamond</p>
-                    <p className={`${colors.mainText} text-2xl my-2`}>$80.00 <span className={` text-xs`}>/hour</span></p>
+                    <p className={`${colors.mainText} text-2xl my-2`}>$50.00 <span className={` text-xs`}>/hour</span></p>
                     <p className={`${colors.secText} text-sm text-center my-2`}>
                         This plan is for businesses who are looking to build their whole information system
                         and website to kick-start online presence!
