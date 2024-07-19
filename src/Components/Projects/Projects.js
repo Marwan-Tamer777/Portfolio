@@ -17,7 +17,7 @@ function Projects() {
       <p className={`${colors.aviText} lg:w-1/2 lg:mx-auto text-center my-4`}>
         All Projects can be found on my{" "}
         <a
-          href="https://github.com/thetimelord777/"
+          href="https://github.com/Marwan-Tamer777/"
           target="_blank"
           className={`${colors.linkText} scale-up font-bold m-1`}
         >

@@ -90,7 +90,7 @@ function NavBarInfoLeft(){
 
                 <div className={`flex flex-row justify-around items-around w-full py-4 ${colors.borderB} border-b-2`}>
                     <a href="https://www.linkedin.com/in/marwan-tamer/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={linkedin} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
-                    <a href="https://github.com/thetimelord777/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={github} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
+                    <a href="https://github.com/Marwan-Tamer777/" target="_blank" className={`p-2 m-2 ${colors.mainBg} rounded-full scale-up`}><object data={github} style={{"pointer-events": "none"}} className="m-auto object-fill"/></a>
                 </div>
 
                 <div className={`w-full py-4 ${colors.borderB} border-b-2`}>
