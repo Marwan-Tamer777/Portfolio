@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import udacityMimicImg from '../../Images/Udacity-Mimic.PNG'
 import techTalksImg from '../../Images/Tech-Talks.PNG'
+import myReadsImg from "../../Images/my-reads.jpg"
 import { ThemeContext } from "../../utils/Context/ThemeContext";
 
 function Projects() {
@@ -73,6 +74,28 @@ function Projects() {
               API for free, so this website version doesn't use the embeds
               feature. but you can download the source code from my github and
               update the server to use your own API keys to try it yourself!)
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://myreads-marwan.netlify.app/"
+          target={"_blank"}
+          className="w-[45%] scale-up"
+        >
+          <div className={`flex flex-col rounded-xl ${colors.cardBg}`}>
+            <img
+              src={myReadsImg}
+              className="object-cover rounded-[inherit] w-full"
+            ></img>
+            <p className={` text-center ${colors.mainText} my-4`}>
+              {" "}
+              A book search Website!
+            </p>
+            <p className={` text-center ${colors.secText} capitalize p-4`}>
+              This project was a submission for Udacity's front-end professional nanodegree.
+              It is a simple book tracking app that you can add your books on it and search for new books
+              using a third party API
             </p>
           </div>
         </a>

@@ -5,7 +5,7 @@ import downloadIcon from '../../Images/download-cv.svg'
 import drawer from "../../Images/nav-drawer.svg"
 import close from "../../Images/nav-close.svg"
 import NavSkillsList from "./NavSkillsList"
-import CV from '../../Resources/Marwan-Tamer-Resume-U.pdf'
+import CV from '../../Resources/Marwan-Tamer-Resume.pdf'
 import { useContext } from "react"
 import { ThemeContext } from "../../utils/Context/ThemeContext"
 const languagesList = {
